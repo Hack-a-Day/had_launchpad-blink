@@ -66,7 +66,8 @@ int main(void) {
   }
 }
 
-interrupt(TIMERA0_VECTOR) TIMERA0_ISR(void) {
+#pragma vector=TIMERA0_VECTOR
+__interrupt void TIMERA0_ISR(void) {
   LED_OUT ^= (LED0 + LED1);	//Toggle both LEDs
 }
 
