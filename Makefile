@@ -10,5 +10,8 @@ all: $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $<
 
+program: all
+	sudo mspdebug rf2500 "prog main.elf"
+
 clean:
 	rm -fr main.elf $(OBJS)
