@@ -52,7 +52,7 @@ int main(void) {
 
   BCSCTL3 |= LFXT1S_2;	//Set ACLK to use internal VLO (12 kHz clock)
 
-  TACTL = TASSEL__ACLK | MC__UP;	//Set TimerA to use auxiliary clock in UP mode
+  TACTL = TASSEL_1 | MC_1;	//Set TimerA to use auxiliary clock in UP mode
   TACCTL0 = CCIE;	//Enable the interrupt for TACCR0 match
   TACCR0 = 11999;	/*Set TACCR0 which also starts the timer. At
 				12 kHz, counting to 12000 should output
