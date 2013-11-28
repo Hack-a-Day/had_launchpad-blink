@@ -20,16 +20,7 @@ Copyright (c) 2010 - Mike Szczys
  THE SOFTWARE.
 */
 
-//#include <msp430x20x2.h>  <-taken care of by including io.h and setting -mmcu=msp430x2012 in cflags
-	/* It's interesting to note that this is not the header
-		file for the chip we are using. This source code
-		is intended for the MSP430G2231 but there's no
-		header file for that specific ship. It apprears
-		That the MPS430x2012 is closely related and
-		I haven't observed any problems with using this
-		header file. */
-#include <io.h>
-#include <signal.h>
+#include <msp430.h>
 
 
 #define     LED0                  BIT0
